@@ -6,6 +6,10 @@ RUN         xcaddy build \
 
 FROM        caddy:2.8.4-alpine
 
+LABEL       org.opencontainers.image.source="https://github.com/ksurl/caddy-docker-proxy"
+
+LABEL       maintainer="ksurl"
+
 RUN         apk add --no-cache ca-certificates curl tzdata; \
             rm -rf /var/cache/apk/*;
 
